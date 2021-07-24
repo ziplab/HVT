@@ -1,0 +1,15 @@
+{
+  "model": "hvt_model",
+  "batch_size": 128,
+  "exp_name": "hvt-s-1",
+  "input_size": 224,
+  "patch_size": 16,
+  "num_heads": 6,
+  "head_dim": 64,
+  "num_blocks": 12,
+  "num_workers": 10,
+  "pool_kernel_size": 3,
+  "pool_stride": 2,
+  "pool_block_width": 12,
+  "weight_decay": 0.025
+}

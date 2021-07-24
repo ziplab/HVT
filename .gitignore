@@ -1,0 +1,7 @@
+*.swp
+**/__pycache__/**
+.dumbo.json
+checkpoints/
+outputs/
+*.pth
+.idea/*
