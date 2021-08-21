@@ -173,7 +173,11 @@ class HVT(nn.Module):
 
     @torch.jit.ignore
     def no_weight_decay(self):
-        return {'pos_embed'}
+        skip = []
+        for name, param in self.named_parameters():
+            if 'pos_embed' in name:
+                skip.append(name)
+        return skip
 
     def get_classifier(self):
         return self.head

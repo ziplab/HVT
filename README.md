@@ -1,6 +1,6 @@
-# Scalable Visual Transformers with Hierarchical Pooling
+# Scalable Vision Transformers with Hierarchical Pooling
 
-This is the official PyTorch implementation of  ICCV 2021 paper: **Scalable Visual Transformers with Hierarchical Pooling**.
+This is the official PyTorch implementation of  ICCV 2021 paper: **Scalable Vision Transformers with Hierarchical Pooling**.
 
 By [Zizheng Pan](https://scholar.google.com.au/citations?user=w_VMopoAAAAJ&hl=en), [Bohan Zhuang](https://sites.google.com/view/bohanzhuang), [Jing Liu](https://sites.google.com/view/jing-liu/首页), [Haoyu He](https://scholar.google.com/citations?user=aU1zMhUAAAAJ&hl=en), and [Jianfei Cai](https://scholar.google.com/citations?user=N6czCoUAAAAJ&hl=en).
 
@@ -14,7 +14,7 @@ If you use this code for a paper please cite:
 
 ```
 @article{pan2021scalable,
-  title={Scalable visual transformers with hierarchical pooling},
+  title={Scalable vision transformers with hierarchical pooling},
   author={Pan, Zizheng and Zhuang, Bohan and Liu, Jing and He, Haoyu and Cai, Jianfei},
   journal={arXiv preprint arXiv:2103.10619},
   year={2021}
@@ -103,13 +103,27 @@ You can scale a HVT model with various settings, which is supported in the confi
 
 
 
-## Results
+## Results on ImageNet
+
+### Main Results
 
 | Name           | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) |
 | -------------- | --------- | ---------- | -------------- | -------------- |
 | HVT-Ti-1       | 0.64      | 5.74       | 69.64          | 89.40          |
 | Scale HVT-Ti-4 | 1.39      | 22.12      | 75.23          | 92.30          |
 | HVT-S-1        | 2.40      | 22.09      | 78.00          | 93.83          |
+
+### More Pooling Stages with HVT-S
+
+| Name    | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) |
+| ------- | --------- | ---------- | -------------- | -------------- |
+| HVT-S-0 | 4.57      | 22.05      | 80.39          | 95.13          |
+| HVT-S-1 | 2.40      | 22.09      | 78.00          | 93.83          |
+| HVT-S-2 | 1.94      | 22.11      | 77.36          | 93.55          |
+| HVT-S-3 | 1.62      | 22.11      | 76.32          | 92.90          |
+| HVT-S-4 | 1.39      | 22.12      | 75.23          | 92.30          |
+
+For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.10619) for more details.
 
 
 
@@ -122,4 +136,5 @@ This repository is released under the Apache 2.0 license as found in the [LICENS
 ## Acknowledgement
 
 This repository has adopted codes from [DeiT](https://github.com/facebookresearch/deit), we thank the authors for their open-sourced code.
+
 
