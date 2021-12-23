@@ -1,7 +1,7 @@
 {
   "model": "hvt_model",
   "batch_size": 128,
-  "exp_name": "hvt-s-1",
+  "exp_name": "hvt-s-2",
   "input_size": 224,
   "patch_size": 16,
   "num_heads": 6,
