@@ -1,5 +1,8 @@
 # Scalable Vision Transformers with Hierarchical Pooling
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+
 This is the official PyTorch implementation of  ICCV 2021 paper: **Scalable Vision Transformers with Hierarchical Pooling**.
 
 By [Zizheng Pan](https://scholar.google.com.au/citations?user=w_VMopoAAAAJ&hl=en), [Bohan Zhuang](https://sites.google.com/view/bohanzhuang), [Jing Liu](https://sites.google.com/view/jing-liu/首页), [Haoyu He](https://scholar.google.com/citations?user=aU1zMhUAAAAJ&hl=en), and [Jianfei Cai](https://scholar.google.com/citations?user=N6czCoUAAAAJ&hl=en).
@@ -13,11 +16,13 @@ In our [paper](https://arxiv.org/abs/2103.10619), we propose a Hierarchical Visu
 If you use this code for a paper please cite:
 
 ```
-@article{pan2021scalable,
-  title={Scalable vision transformers with hierarchical pooling},
-  author={Pan, Zizheng and Zhuang, Bohan and Liu, Jing and He, Haoyu and Cai, Jianfei},
-  journal={arXiv preprint arXiv:2103.10619},
-  year={2021}
+@InProceedings{Pan_2021_ICCV,
+    author    = {Pan, Zizheng and Zhuang, Bohan and Liu, Jing and He, Haoyu and Cai, Jianfei},
+    title     = {Scalable Vision Transformers With Hierarchical Pooling},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {377-386}
 }
 ```
 
@@ -107,21 +112,24 @@ You can scale a HVT model with various settings, which is supported in the confi
 
 ### Main Results
 
-| Name           | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) |
-| -------------- | --------- | ---------- | -------------- | -------------- |
-| HVT-Ti-1       | 0.64      | 5.74       | 69.64          | 89.40          |
-| Scale HVT-Ti-4 | 1.39      | 22.12      | 75.23          | 92.30          |
-| HVT-S-1        | 2.40      | 22.09      | 78.00          | 93.83          |
+| Name           | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) | Model                                                        | Log                                                          |
+| -------------- | --------- | ---------- | -------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| HVT-Ti-1       | 0.64      | 5.74       | 69.64          | 89.40          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_ti_1.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_ti_1) |
+| Scale HVT-Ti-4 | 1.39      | 22.12      | 75.23          | 92.30          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/scale_hvt_ti_4.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_scale_hvt_ti_4) |
+| HVT-S-1        | 2.40      | 22.09      | 78.00          | 93.83          | -                                                            | -                                                            |
+
 
 ### More Pooling Stages with HVT-S
 
-| Name    | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) |
-| ------- | --------- | ---------- | -------------- | -------------- |
-| HVT-S-0 | 4.57      | 22.05      | 80.39          | 95.13          |
-| HVT-S-1 | 2.40      | 22.09      | 78.00          | 93.83          |
-| HVT-S-2 | 1.94      | 22.11      | 77.36          | 93.55          |
-| HVT-S-3 | 1.62      | 22.11      | 76.32          | 92.90          |
-| HVT-S-4 | 1.39      | 22.12      | 75.23          | 92.30          |
+| Name    | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) | Model                                                        | Log                                                          |
+| ------- | --------- | ---------- | -------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| HVT-S-0 | 4.57      | 22.05      | 80.39          | 95.13          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_0.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_0) |
+| HVT-S-1 | 2.40      | 22.09      | 78.00          | 93.83          | -                                                            | -                                                            |
+| HVT-S-2 | 1.94      | 22.11      | 77.36          | 93.55          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_2.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_2) |
+| HVT-S-3 | 1.62      | 22.11      | 76.32          | 92.90          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_3.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_3) |
+| HVT-S-4 | 1.39      | 22.12      | 75.23          | 92.30          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/scale_hvt_ti_4.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_scale_hvt_ti_4) |
+
+
 
 For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.10619) for more details.
 
