@@ -94,6 +94,16 @@ python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --config
 
 
 
+## Evaluation
+
+To evaluate a model on ImageNet, e.g. HVT-S-1, run:
+
+```
+python main.py --config config/hvt-s-1.json --data-set IMNET --data-path [path/to/imagenet] --eval --resume [path/to/hvt_s_1.pth]
+```
+
+
+
 ## Scaling HVT
 
 You can scale a HVT model with various settings, which is supported in the configuration file:
@@ -116,20 +126,19 @@ You can scale a HVT model with various settings, which is supported in the confi
 | -------------- | --------- | ---------- | -------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | HVT-Ti-1       | 0.64      | 5.74       | 69.64          | 89.40          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_ti_1.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_ti_1) |
 | Scale HVT-Ti-4 | 1.39      | 22.12      | 75.23          | 92.30          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/scale_hvt_ti_4.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_scale_hvt_ti_4) |
-| HVT-S-1        | 2.40      | 22.09      | 78.00          | 93.83          | -                                                            | -                                                            |
+| HVT-S-1        | 2.40      | 22.09      | 78.00          | 93.83          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.1/hvt_s_1.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.1/hvt_s_1_log.txt) |
 
+> Note that model weights and logs for HVT-Ti-1 and HVT-S-1 have been retrained.
 
 ### More Pooling Stages with HVT-S
 
 | Name    | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Top-5 Acc. (%) | Model                                                        | Log                                                          |
 | ------- | --------- | ---------- | -------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | HVT-S-0 | 4.57      | 22.05      | 80.39          | 95.13          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_0.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_0) |
-| HVT-S-1 | 2.40      | 22.09      | 78.00          | 93.83          | -                                                            | -                                                            |
+| HVT-S-1 | 2.40      | 22.09      | 78.00          | 93.83          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.1/hvt_s_1.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.1/hvt_s_1_log.txt) |
 | HVT-S-2 | 1.94      | 22.11      | 77.36          | 93.55          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_2.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_2) |
 | HVT-S-3 | 1.62      | 22.11      | 76.32          | 92.90          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/hvt_s_3.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_hvt_s_3) |
 | HVT-S-4 | 1.39      | 22.12      | 75.23          | 92.30          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/scale_hvt_ti_4.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_scale_hvt_ti_4) |
-
-
 
 For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.10619) for more details.
 
@@ -144,5 +153,4 @@ This repository is released under the Apache 2.0 license as found in the [LICENS
 ## Acknowledgement
 
 This repository has adopted codes from [DeiT](https://github.com/facebookresearch/deit), we thank the authors for their open-sourced code.
-
 
