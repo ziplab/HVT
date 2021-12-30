@@ -144,6 +144,12 @@ For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.1
 
 
 
+## 3rd Party Implementation
+
+- [PaddleViT](https://github.com/BR-IDL/PaddleViT/tree/develop/image_classification/HVT) from Baidu
+
+
+
 # License
 
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
