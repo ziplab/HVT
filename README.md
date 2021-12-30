@@ -28,6 +28,12 @@ If you use this code for a paper please cite:
 
 
 
+## Updates
+
+- 30/12/2021: HVT has been integrated into [PaddleViT](https://github.com/BR-IDL/PaddleViT), checkout [here](https://github.com/BR-IDL/PaddleViT/tree/develop/image_classification/HVT) for the 3rd party implementation!
+
+
+
 # Usage
 
 First, clone the repository locally:
@@ -141,12 +147,6 @@ You can scale a HVT model with various settings, which is supported in the confi
 | HVT-S-4 | 1.39      | 22.12      | 75.23          | 92.30          | [github](https://github.com/zhuang-group/HVT/releases/download/v1.0/scale_hvt_ti_4.pth) | [log](https://github.com/zhuang-group/HVT/releases/download/v1.0/log_scale_hvt_ti_4) |
 
 For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.10619) for more details.
-
-
-
-## 3rd Party Implementation
-
-- [PaddleViT](https://github.com/BR-IDL/PaddleViT/tree/develop/image_classification/HVT) from Baidu
 
 
 
