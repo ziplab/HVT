@@ -34,7 +34,7 @@ If you use this code for a paper please cite:
 
 
 
-# Usage
+## Usage
 
 First, clone the repository locally:
 ```
@@ -150,7 +150,7 @@ For CIFAR-100 results, please check out our [paper](https://arxiv.org/abs/2103.1
 
 
 
-# License
+## License
 
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
 
